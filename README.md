@@ -1,27 +1,30 @@
-# Frontend
+# Frontend para proyecto de Bases de datos (IUA)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+Esta es la parte visual del proyecto destinado para bases de datos. Dicho proyecto sera presentado durante una exposicion oral en la cual se hablara de MongoDB y Json. La parte del backend puede ser encontrada en el siguiente [Link](https://github.com/AguuSz/proyectoDB-backend).
+Este proyecto fue hecho utilizando el stack MEAN (MongoDB, Express, Angular, NodeJS).
 
-## Development server
+![Logo IUA](https://www.iua.edu.ar/caia4/iua/imagenes/escudo/descargas/isologo_f_blanco.jpg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Como utilizarlo
 
-## Code scaffolding
+**Importante tener ya clonado la parte del backend, sino no funcionara**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clonar el repositorio mediante
 
-## Build
+> git clone https://github.com/AguuSz/proyectoDB-frontend.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Luego instalar las dependencias de NodeJS
 
-## Running unit tests
+> npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Correr angular
 
-## Running end-to-end tests
+> ng serve
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Y listo!
 
-## Further help
+## Capturas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Captura 1](https://i.imgur.com/bZy5SH2.png)
+![Captura 2](https://i.imgur.com/inIknsh.png)
+![Captura 3](https://i.imgur.com/XSUUzPq.png)
