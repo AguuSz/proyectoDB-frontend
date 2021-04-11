@@ -1,0 +1,53 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+        <div class="sidebar has-background-white">
+            <h1 class="title has-text-primary">
+                Listas
+            </h1>
+
+            <div class="list-menu">
+                <a class="list-menu-item" *ngFor="let listElement of lists" [routerLink]="['/lists', listElement._id]" routerLinkActive="is-active">
+                    <p>{{listElement.title}}</p>
+                </a>
+            </div>
+
+            <button class="button is-primary has-text-white" (click)="showListModal()">+ Nueva Lista</button>
+        </div>
+        <div class="task-list-container has-background-light">
+            <div class="appbar">
+                <h1 class="title has-text-primary">
+                    Tareas
+                </h1>
+    
+                <button class="button is-primary" (click)="deleteList()">Eliminar lista</button>
+            </div>
+            
+            <!-- Task elements -->
+            <div class="task" *ngFor="let task of tasks" (click)="markAsDone(task)">
+                <p class="task-title">{{task.title}}</p>
+
+                <div class="buttons">
+                    <button class="button is-info" (click)="updateTaskModal(task)">
+                        <img class="asset-png" src="../../../assets/refresh.png">
+                    </button>
+                    <button class="button is-danger" (click)="deleteTask(task)">
+                        <img class="asset-png" src="../../../assets/letter-x.png">
+                    </button>
+
+                </div>
+            </div>
+
+            <div *ngIf="tasks.length==0">No hay tareas para mostrar</div>
+
+            <button class="circle-add-button button is-primary" (click)="showTaskModal()">
+                <img src="../../../assets/plus-icon.svg">
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<app-new-list-modal *ngIf="showNewListModal" (onClose)="createNewList($event)"></app-new-list-modal>
+<app-new-task-modal *ngIf="showNewTaskModal" (onClose)="createNewTask($event)"></app-new-task-modal>
+<app-update-modal *ngIf="showUpdateModal" (onClose)="updateTitle($event)"></app-update-modal>
+

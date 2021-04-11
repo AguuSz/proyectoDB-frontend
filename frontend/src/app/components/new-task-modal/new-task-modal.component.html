@@ -1,0 +1,18 @@
+<div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Nueva tarea</p>
+        <button class="delete" aria-label="close" (click)="cancel()"></button>
+      </header>
+      <section class="modal-card-body">
+
+        <input name="title" [(ngModel)]="title" class="input is-medium" type="text" placeholder="Titulo para la nueva tarea">
+  
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" (click)="saveTitle()">Guardar cambios</button>
+        <button class="button" (click)="cancel()">Cancelar</button>
+      </footer>
+    </div>
+  </div>
